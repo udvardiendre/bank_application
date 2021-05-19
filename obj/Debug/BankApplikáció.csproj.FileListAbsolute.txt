@@ -20,3 +20,5 @@ C:\Users\udvar\source\repos\BankApplikáció\obj\Debug\BankApplikáció.updateAc
 C:\Users\udvar\source\repos\BankApplikáció\obj\Debug\BankApplikáció.depositForm.resources
 C:\Users\udvar\source\repos\BankApplikáció\obj\Debug\BankApplikáció.withdrawForm.resources
 C:\Users\udvar\source\repos\BankApplikáció\obj\Debug\BankApplikáció.trasferForm.resources
+C:\Users\udvar\source\repos\BankApplikáció\obj\Debug\BankApplikáció.fixedDepositForm.resources
+C:\Users\udvar\source\repos\BankApplikáció\obj\Debug\BankApplikáció.myFixedDeposit.resources

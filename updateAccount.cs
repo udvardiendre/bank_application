@@ -59,6 +59,8 @@ namespace BankApplikáció
 
         private void deatilsBtn_Click(object sender, EventArgs e)
         {
+            dataGridView1.AutoGenerateColumns = false;
+
             bi = new BindingList<userAccount>();
             dbe = new banking_dbEntities();
             decimal accNo = Convert.ToDecimal(accNoTb.Text);

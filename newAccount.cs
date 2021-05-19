@@ -60,7 +60,7 @@ namespace BankApplikáció
 
         private void loadDate()
         {
-            // throw new NotImplementedException();
+            
             dateLbl.Text = DateTime.Now.ToString("yyyy/MM/dd");
         }
 

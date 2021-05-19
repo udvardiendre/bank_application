@@ -174,11 +174,17 @@
     <EmbeddedResource Include="depositForm.resx">
       <DependentUpon>depositForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fixedDepositForm.resx">
+      <DependentUpon>fixedDepositForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myFixedDeposit.resx">
+      <DependentUpon>myFixedDeposit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newAccount.resx">
       <DependentUpon>newAccount.cs</DependentUpon>

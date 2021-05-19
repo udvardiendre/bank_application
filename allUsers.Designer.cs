@@ -30,7 +30,6 @@ namespace BankApplikáció
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.Account_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsersNames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +37,7 @@ namespace BankApplikáció
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,16 +59,6 @@ namespace BankApplikáció
             this.dataGridView1.Size = new System.Drawing.Size(919, 458);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(370, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ügyfél Lista";
             // 
             // Account_No
             // 
@@ -125,6 +115,16 @@ namespace BankApplikáció
             this.Balance.MinimumWidth = 6;
             this.Balance.Name = "Balance";
             this.Balance.Width = 125;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(370, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ügyfél Lista";
             // 
             // allUsers
             // 

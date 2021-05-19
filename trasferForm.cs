@@ -28,8 +28,15 @@ namespace BankApplikáció
             banking_dbEntities context = new banking_dbEntities();
             decimal b = Convert.ToDecimal(accNoTb.Text);
             var item = (from u in context.userAccounts where u.Account_No == b select u).FirstOrDefault();
-            nameTb.Text = item.Name;
-            oldBalTb.Text = Convert.ToString(item.Balance);
+            if (item != null)
+            {
+                nameTb.Text = item.Name;
+                oldBalTb.Text = Convert.ToString(item.Balance);
+            }
+            else
+            {
+                MessageBox.Show("Nem létező számlaszám!");
+            }
         }
 
         private void transferBtn_Click(object sender, EventArgs e)

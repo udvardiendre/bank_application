@@ -61,6 +61,17 @@ namespace BankApplikáció
             this.deatilsBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Account_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mother_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Zip_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Picture = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -357,6 +368,18 @@ namespace BankApplikáció
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Account_No,
+            this.CustomerName,
+            this.Mother_Name,
+            this.DOB,
+            this.Phone_No,
+            this.Zip_code,
+            this.State,
+            this.City,
+            this.Address,
+            this.Picture,
+            this.Gender});
             this.dataGridView1.Location = new System.Drawing.Point(791, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -364,6 +387,94 @@ namespace BankApplikáció
             this.dataGridView1.Size = new System.Drawing.Size(429, 490);
             this.dataGridView1.TabIndex = 56;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Account_No
+            // 
+            this.Account_No.DataPropertyName = "Account_No";
+            this.Account_No.HeaderText = "Számlaszám";
+            this.Account_No.MinimumWidth = 6;
+            this.Account_No.Name = "Account_No";
+            this.Account_No.Width = 125;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "Name";
+            this.CustomerName.HeaderText = "Név";
+            this.CustomerName.MinimumWidth = 6;
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.Width = 125;
+            // 
+            // Mother_Name
+            // 
+            this.Mother_Name.DataPropertyName = "Mother_Name";
+            this.Mother_Name.HeaderText = "Anyja neve";
+            this.Mother_Name.MinimumWidth = 6;
+            this.Mother_Name.Name = "Mother_Name";
+            this.Mother_Name.Width = 125;
+            // 
+            // DOB
+            // 
+            this.DOB.DataPropertyName = "DOB";
+            this.DOB.HeaderText = "Születési dátum";
+            this.DOB.MinimumWidth = 6;
+            this.DOB.Name = "DOB";
+            this.DOB.Width = 125;
+            // 
+            // Phone_No
+            // 
+            this.Phone_No.DataPropertyName = "Phone_No";
+            this.Phone_No.HeaderText = "Telefonszám";
+            this.Phone_No.MinimumWidth = 6;
+            this.Phone_No.Name = "Phone_No";
+            this.Phone_No.Width = 125;
+            // 
+            // Zip_code
+            // 
+            this.Zip_code.DataPropertyName = "Zip_Code";
+            this.Zip_code.HeaderText = "Irányítószám";
+            this.Zip_code.MinimumWidth = 6;
+            this.Zip_code.Name = "Zip_code";
+            this.Zip_code.Width = 125;
+            // 
+            // State
+            // 
+            this.State.DataPropertyName = "State";
+            this.State.HeaderText = "Megye";
+            this.State.MinimumWidth = 6;
+            this.State.Name = "State";
+            this.State.Width = 125;
+            // 
+            // City
+            // 
+            this.City.DataPropertyName = "City";
+            this.City.HeaderText = "Város";
+            this.City.MinimumWidth = 6;
+            this.City.Name = "City";
+            this.City.Width = 125;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Cím";
+            this.Address.MinimumWidth = 6;
+            this.Address.Name = "Address";
+            this.Address.Width = 125;
+            // 
+            // Picture
+            // 
+            this.Picture.DataPropertyName = "Picture";
+            this.Picture.HeaderText = "Fénykép";
+            this.Picture.MinimumWidth = 6;
+            this.Picture.Name = "Picture";
+            this.Picture.Width = 125;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "Neme";
+            this.Gender.MinimumWidth = 6;
+            this.Gender.Name = "Gender";
+            this.Gender.Width = 125;
             // 
             // updateAccount
             // 
@@ -443,5 +554,16 @@ namespace BankApplikáció
         private System.Windows.Forms.Button deatilsBtn;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Account_No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mother_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone_No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Zip_code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn State;
+        private System.Windows.Forms.DataGridViewTextBoxColumn City;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Picture;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
     }
 }
