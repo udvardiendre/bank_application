@@ -15,6 +15,24 @@ namespace BankApplikáció
         public fixedDepositForm()
         {
             InitializeComponent();
+            loadDate();
+        }
+
+        private void loadDate()
+        {
+            dateLbl.Text = DateTime.Now.ToString("yyyy/MM/dd");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fixBtn_Click(object sender, EventArgs e)
+        {
+            banking_dbEntities context = new banking_dbEntities();
+            decimal accno = Convert.ToDecimal(accNoTb.Text);
+
         }
     }
 }
