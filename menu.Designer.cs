@@ -31,7 +31,6 @@ namespace BankApplikáció
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fiókToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.újFiókToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fiókKeresésefrissítéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +47,8 @@ namespace BankApplikáció
             this.kijelentkezésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jelszóMódosításaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,12 +66,6 @@ namespace BankApplikáció
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // fiókToolStripMenuItem
             // 
             this.fiókToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -84,21 +79,21 @@ namespace BankApplikáció
             // újFiókToolStripMenuItem
             // 
             this.újFiókToolStripMenuItem.Name = "újFiókToolStripMenuItem";
-            this.újFiókToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.újFiókToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.újFiókToolStripMenuItem.Text = "Új Fiók";
             this.újFiókToolStripMenuItem.Click += new System.EventHandler(this.újFiókToolStripMenuItem_Click);
             // 
             // fiókKeresésefrissítéseToolStripMenuItem
             // 
             this.fiókKeresésefrissítéseToolStripMenuItem.Name = "fiókKeresésefrissítéseToolStripMenuItem";
-            this.fiókKeresésefrissítéseToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
-            this.fiókKeresésefrissítéseToolStripMenuItem.Text = "Fiók keresése/frissítése";
+            this.fiókKeresésefrissítéseToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.fiókKeresésefrissítéseToolStripMenuItem.Text = "Fiók frissítése/törlése";
             this.fiókKeresésefrissítéseToolStripMenuItem.Click += new System.EventHandler(this.fiókKeresésefrissítéseToolStripMenuItem_Click);
             // 
             // felhasználókToolStripMenuItem
             // 
             this.felhasználókToolStripMenuItem.Name = "felhasználókToolStripMenuItem";
-            this.felhasználókToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.felhasználókToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.felhasználókToolStripMenuItem.Text = "Felhasználók";
             this.felhasználókToolStripMenuItem.Click += new System.EventHandler(this.felhasználókToolStripMenuItem_Click);
             // 
@@ -154,7 +149,7 @@ namespace BankApplikáció
             // 
             this.egyenlegToolStripMenuItem.Name = "egyenlegToolStripMenuItem";
             this.egyenlegToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.egyenlegToolStripMenuItem.Text = "Egyenleg";
+            this.egyenlegToolStripMenuItem.Text = "Mérleg";
             this.egyenlegToolStripMenuItem.Click += new System.EventHandler(this.egyenlegToolStripMenuItem_Click);
             // 
             // lekötöttBetétToolStripMenuItem
@@ -195,6 +190,18 @@ namespace BankApplikáció
             this.kilépésToolStripMenuItem.Text = "Kilépés";
             this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -204,7 +211,7 @@ namespace BankApplikáció
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "menu";
-            this.Text = "menu";
+            this.Text = "Menü";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -232,5 +239,6 @@ namespace BankApplikáció
         private System.Windows.Forms.ToolStripMenuItem kijelentkezésToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jelszóMódosításaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kilépésToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
     }
 }

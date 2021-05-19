@@ -51,7 +51,7 @@ namespace BankApplikáció
             context.SaveChanges();
                          
             MessageBox.Show("Sikeres lekötés!");
-            // Hibákat lekell kezelni csak 180 namosra lehet lekötni eddig
+            // Hibákat lekell kezelni csak 180 napos lehet lekötni eddig
         }  
     }
 }

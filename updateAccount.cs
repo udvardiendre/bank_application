@@ -48,13 +48,58 @@ namespace BankApplikáció
 
         private void loadDate()
         {
-            // throw new NotImplementedException();
+            
             dateLbl.Text = DateTime.Now.ToString("yyyy/MM/dd");
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-           // ha nincs más akkor newForm save buttonja.
+            dbe = new banking_dbEntities();
+            decimal accountno = Convert.ToDecimal(accNoTb.Text);
+            userAccount useraccount = dbe.userAccounts.First(s => s.Account_No.Equals(accountno));
+            useraccount.Account_No = Convert.ToDecimal(accNoTb.Text);
+            useraccount.Name = nameTb.Text;
+            useraccount.Mother_Name = motherNameTb.Text;
+            useraccount.Date = birthDateTimePicker.Value.ToString();
+            useraccount.Phone_No = numberTb.Text;
+            try
+            {
+                useraccount.Zip_Code = Convert.ToDecimal(zipTb.Text);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Kérjük töltse ki az összes mezőt!");
+                Console.WriteLine(ex.Message);
+            }
+            useraccount.State = statecB.SelectedItem.ToString();
+            useraccount.City = cityTb.Text;
+            useraccount.Address = addressTb.Text;
+            if (wmnBtn.Checked)
+            {
+                useraccount.Gender = "Nő";
+            }
+            else if (maleBtn.Checked)
+            {
+                useraccount.Gender = "Férfi";
+            }
+            else if (otherBtn.Checked)
+            {
+                useraccount.Gender = "Egyéb";
+            }
+
+            Image img = pictureBox1.Image;
+            if (img.RawFormat != null)
+            {
+                if (ms != null)
+                {
+                    img.Save(ms, img.RawFormat);
+                    useraccount.Picture = ms.ToArray();
+                }
+            }
+            dbe.SaveChanges();
+            MessageBox.Show("Az ügyfél adatai frissültek!");
+           
+
         }
 
         private void deatilsBtn_Click(object sender, EventArgs e)

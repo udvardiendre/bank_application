@@ -120,7 +120,7 @@ namespace BankApplikáció
             acc.Gender = gender;
             acc.Balance = Convert.ToDecimal(balanceTb.Text);
             acc.Date = dateLbl.Text;
-            if (pictureBox1.Image != null) { // Ezen lehet alakítgatni kell mert az adatbázisban egyenlőre NULL értékű.
+            if (pictureBox1.Image != null) {
                 acc.Picture = ms.ToArray();
             }
             
