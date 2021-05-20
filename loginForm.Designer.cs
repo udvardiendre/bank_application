@@ -98,7 +98,7 @@ namespace BankApplikáció
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(451, 401);
+            this.ClientSize = new System.Drawing.Size(451, 315);
             this.Controls.Add(this.passwordTb);
             this.Controls.Add(this.usernameTb);
             this.Controls.Add(this.adminLb);
@@ -106,7 +106,7 @@ namespace BankApplikáció
             this.Controls.Add(this.passwordLb);
             this.Controls.Add(this.usernameLb);
             this.Name = "loginForm";
-            this.Text = "loginForm";
+            this.Text = "Bejelentkezés";
             this.ResumeLayout(false);
             this.PerformLayout();
 

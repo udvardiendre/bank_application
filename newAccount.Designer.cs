@@ -253,7 +253,7 @@ namespace BankApplikáció
             this.accNoTb.Name = "accNoTb";
             this.accNoTb.Size = new System.Drawing.Size(301, 22);
             this.accNoTb.TabIndex = 15;
-            this.accNoTb.TextChanged += new System.EventHandler(this.accNoTb_TextChanged);
+            
             // 
             // nameTb
             // 
@@ -372,7 +372,7 @@ namespace BankApplikáció
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "newAccount";
-            this.Text = "newAccount";
+            this.Text = "Új ügyfél felvétele";
             this.Load += new System.EventHandler(this.newAccount_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

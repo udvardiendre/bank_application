@@ -191,7 +191,7 @@ namespace BankApplikáció
             this.Controls.Add(this.dateLbl);
             this.Controls.Add(this.label1);
             this.Name = "fixedDepositForm";
-            this.Text = "fixedDepositForm";
+            this.Text = "Betét lekötés";
             this.ResumeLayout(false);
             this.PerformLayout();
 

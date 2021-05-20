@@ -202,7 +202,7 @@ namespace BankApplikáció
             this.Controls.Add(this.dateLbl);
             this.Controls.Add(this.label1);
             this.Name = "withdrawForm";
-            this.Text = "withdrawForm";
+            this.Text = "Kifizetés";
             this.Load += new System.EventHandler(this.withdrawForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

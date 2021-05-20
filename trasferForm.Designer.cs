@@ -201,7 +201,7 @@ namespace BankApplikáció
             this.Controls.Add(this.dateLbl);
             this.Controls.Add(this.label1);
             this.Name = "trasferForm";
-            this.Text = "trasferForm";
+            this.Text = "Átutalás";
             this.ResumeLayout(false);
             this.PerformLayout();
 

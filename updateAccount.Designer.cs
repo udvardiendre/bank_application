@@ -511,7 +511,7 @@ namespace BankApplikáció
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "updateAccount";
-            this.Text = "updateAccount";
+            this.Text = "Fiók frissítése/törlése";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

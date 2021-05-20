@@ -202,7 +202,7 @@ namespace BankApplikáció
             this.Controls.Add(this.dateLbl);
             this.Controls.Add(this.label1);
             this.Name = "depositForm";
-            this.Text = "depositForm";
+            this.Text = "Befizetés";
             this.Load += new System.EventHandler(this.depositForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

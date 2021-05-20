@@ -54,66 +54,79 @@ namespace BankApplikáció
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            dbe = new banking_dbEntities();
-            decimal accountno = Convert.ToDecimal(accNoTb.Text);
-            userAccount useraccount = dbe.userAccounts.First(s => s.Account_No.Equals(accountno));
-            useraccount.Account_No = Convert.ToDecimal(accNoTb.Text);
-            useraccount.Name = nameTb.Text;
-            useraccount.Mother_Name = motherNameTb.Text;
-            useraccount.Date = birthDateTimePicker.Value.ToString();
-            useraccount.Phone_No = numberTb.Text;
+            
             try
             {
+                dbe = new banking_dbEntities();
+                decimal accountno = Convert.ToDecimal(accNoTb.Text);
+                userAccount useraccount = dbe.userAccounts.First(s => s.Account_No.Equals(accountno));
+                useraccount.Account_No = Convert.ToDecimal(accNoTb.Text);
+                useraccount.Name = nameTb.Text;
+                useraccount.Mother_Name = motherNameTb.Text;
+                useraccount.Date = birthDateTimePicker.Value.ToString();
+                useraccount.Phone_No = numberTb.Text;
                 useraccount.Zip_Code = Convert.ToDecimal(zipTb.Text);
+                useraccount.State = statecB.SelectedItem.ToString();
+                useraccount.City = cityTb.Text;
+                useraccount.Address = addressTb.Text;
+                if (wmnBtn.Checked)
+                {
+                    useraccount.Gender = "Nő";
+                }
+                else if (maleBtn.Checked)
+                {
+                    useraccount.Gender = "Férfi";
+                }
+                else if (otherBtn.Checked)
+                {
+                    useraccount.Gender = "Egyéb";
+                }
+
+                Image img = pictureBox1.Image;
+                if (img.RawFormat != null)
+                {
+                    if (ms != null)
+                    {
+                        img.Save(ms, img.RawFormat);
+                        useraccount.Picture = ms.ToArray();
+                    }
+                }
+                dbe.SaveChanges();
+                MessageBox.Show("Az ügyfél adatai frissültek!");
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Kérjük töltse ki az összes mezőt!");
                 Console.WriteLine(ex.Message);
             }
-            useraccount.State = statecB.SelectedItem.ToString();
-            useraccount.City = cityTb.Text;
-            useraccount.Address = addressTb.Text;
-            if (wmnBtn.Checked)
-            {
-                useraccount.Gender = "Nő";
-            }
-            else if (maleBtn.Checked)
-            {
-                useraccount.Gender = "Férfi";
-            }
-            else if (otherBtn.Checked)
-            {
-                useraccount.Gender = "Egyéb";
-            }
-
-            Image img = pictureBox1.Image;
-            if (img.RawFormat != null)
-            {
-                if (ms != null)
-                {
-                    img.Save(ms, img.RawFormat);
-                    useraccount.Picture = ms.ToArray();
-                }
-            }
-            dbe.SaveChanges();
-            MessageBox.Show("Az ügyfél adatai frissültek!");
+            
            
 
         }
 
         private void deatilsBtn_Click(object sender, EventArgs e)
         {
-            dataGridView1.AutoGenerateColumns = false;
+            try
+            {
+                dataGridView1.AutoGenerateColumns = false;
 
-            bi = new BindingList<userAccount>();
-            dbe = new banking_dbEntities();
-            decimal accNo = Convert.ToDecimal(accNoTb.Text);
-            var item = dbe.userAccounts.Where(a => a.Account_No == accNo);
-            foreach (var item1 in item) {
-                bi.Add(item1);
+                bi = new BindingList<userAccount>();
+                dbe = new banking_dbEntities();
+                decimal accNo = Convert.ToDecimal(accNoTb.Text);
+                var item = dbe.userAccounts.Where(a => a.Account_No == accNo);
+                foreach (var item1 in item)
+                {
+                    bi.Add(item1);
+                }
+                dataGridView1.DataSource = bi;
             }
-            dataGridView1.DataSource = bi;
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Kérjük töltse ki az összes mezőt!");
+                Console.WriteLine(ex.Message);
+            }
+            
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -178,12 +191,18 @@ namespace BankApplikáció
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            bi.RemoveAt(dataGridView1.CurrentCell.RowIndex);
-            dbe = new banking_dbEntities();
-            decimal a = Convert.ToDecimal(accNoTb.Text);
-            userAccount acc = dbe.userAccounts.First(s => s.Account_No.Equals(a));
-            dbe.userAccounts.Remove(acc);
-            dbe.SaveChanges();
+            try {
+                bi.RemoveAt(dataGridView1.CurrentCell.RowIndex);
+                dbe = new banking_dbEntities();
+                decimal a = Convert.ToDecimal(accNoTb.Text);
+                userAccount acc = dbe.userAccounts.First(s => s.Account_No.Equals(a));
+                dbe.userAccounts.Remove(acc);
+                dbe.SaveChanges();
+            } catch (Exception ex) {
+                Console.WriteLine("Kérjük töltse ki az összes mezőt!");
+                Console.WriteLine(ex.Message);
+            }
+            
         }
     }
 }

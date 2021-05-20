@@ -62,7 +62,7 @@ namespace BankApplikáció
             this.profilToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1189, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1219, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,7 +94,7 @@ namespace BankApplikáció
             // 
             this.felhasználókToolStripMenuItem.Name = "felhasználókToolStripMenuItem";
             this.felhasználókToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
-            this.felhasználókToolStripMenuItem.Text = "Felhasználók";
+            this.felhasználókToolStripMenuItem.Text = "Ügyfelek";
             this.felhasználókToolStripMenuItem.Click += new System.EventHandler(this.felhasználókToolStripMenuItem_Click);
             // 
             // tranzakciókToolStripMenuItem
@@ -111,28 +111,28 @@ namespace BankApplikáció
             // befizetésToolStripMenuItem
             // 
             this.befizetésToolStripMenuItem.Name = "befizetésToolStripMenuItem";
-            this.befizetésToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.befizetésToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.befizetésToolStripMenuItem.Text = "Befizetés";
             this.befizetésToolStripMenuItem.Click += new System.EventHandler(this.befizetésToolStripMenuItem_Click);
             // 
             // kifizetésToolStripMenuItem
             // 
             this.kifizetésToolStripMenuItem.Name = "kifizetésToolStripMenuItem";
-            this.kifizetésToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kifizetésToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.kifizetésToolStripMenuItem.Text = "Kifizetés";
             this.kifizetésToolStripMenuItem.Click += new System.EventHandler(this.kifizetésToolStripMenuItem_Click);
             // 
             // átutalásToolStripMenuItem
             // 
             this.átutalásToolStripMenuItem.Name = "átutalásToolStripMenuItem";
-            this.átutalásToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.átutalásToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.átutalásToolStripMenuItem.Text = "Átutalás";
             this.átutalásToolStripMenuItem.Click += new System.EventHandler(this.átutalásToolStripMenuItem_Click);
             // 
             // betétLekötésToolStripMenuItem
             // 
             this.betétLekötésToolStripMenuItem.Name = "betétLekötésToolStripMenuItem";
-            this.betétLekötésToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.betétLekötésToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.betétLekötésToolStripMenuItem.Text = "Betét lekötés";
             this.betétLekötésToolStripMenuItem.Click += new System.EventHandler(this.betétLekötésToolStripMenuItem_Click);
             // 
@@ -148,14 +148,14 @@ namespace BankApplikáció
             // egyenlegToolStripMenuItem
             // 
             this.egyenlegToolStripMenuItem.Name = "egyenlegToolStripMenuItem";
-            this.egyenlegToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.egyenlegToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
             this.egyenlegToolStripMenuItem.Text = "Mérleg";
             this.egyenlegToolStripMenuItem.Click += new System.EventHandler(this.egyenlegToolStripMenuItem_Click);
             // 
             // lekötöttBetétToolStripMenuItem
             // 
             this.lekötöttBetétToolStripMenuItem.Name = "lekötöttBetétToolStripMenuItem";
-            this.lekötöttBetétToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.lekötöttBetétToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
             this.lekötöttBetétToolStripMenuItem.Text = "Lekötött betét";
             this.lekötöttBetétToolStripMenuItem.Click += new System.EventHandler(this.lekötöttBetétToolStripMenuItem_Click);
             // 
@@ -172,21 +172,21 @@ namespace BankApplikáció
             // kijelentkezésToolStripMenuItem
             // 
             this.kijelentkezésToolStripMenuItem.Name = "kijelentkezésToolStripMenuItem";
-            this.kijelentkezésToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kijelentkezésToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.kijelentkezésToolStripMenuItem.Text = "Kijelentkezés";
             this.kijelentkezésToolStripMenuItem.Click += new System.EventHandler(this.kijelentkezésToolStripMenuItem_Click);
             // 
             // jelszóMódosításaToolStripMenuItem
             // 
             this.jelszóMódosításaToolStripMenuItem.Name = "jelszóMódosításaToolStripMenuItem";
-            this.jelszóMódosításaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.jelszóMódosításaToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.jelszóMódosításaToolStripMenuItem.Text = "Jelszó módosítása";
             this.jelszóMódosításaToolStripMenuItem.Click += new System.EventHandler(this.jelszóMódosításaToolStripMenuItem_Click);
             // 
             // kilépésToolStripMenuItem
             // 
             this.kilépésToolStripMenuItem.Name = "kilépésToolStripMenuItem";
-            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.kilépésToolStripMenuItem.Text = "Kilépés";
             this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
             // 
@@ -206,7 +206,7 @@ namespace BankApplikáció
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 520);
+            this.ClientSize = new System.Drawing.Size(1219, 799);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;

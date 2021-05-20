@@ -107,34 +107,26 @@ namespace BankApplikáció
             try
             {
                 acc.Zip_Code = Convert.ToDecimal(zipTb.Text);
+                acc.State = statecB.SelectedItem.ToString();
+                acc.City = cityTb.Text;
+                acc.Address = addressTb.Text;
+                acc.Gender = gender;
+                acc.Balance = Convert.ToDecimal(balanceTb.Text);
+                acc.Date = dateLbl.Text;
+                BSE.userAccounts.Add(acc);
+                BSE.SaveChanges();
+
+                MessageBox.Show("Ügyfél rögzítve");
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Kérjük töltse ki az összes mezőt!");
                 Console.WriteLine(ex.Message);
             }
-
-            acc.State = statecB.SelectedItem.ToString();
-            acc.City = cityTb.Text;
-            acc.Address = addressTb.Text;
-            acc.Gender = gender;
-            acc.Balance = Convert.ToDecimal(balanceTb.Text);
-            acc.Date = dateLbl.Text;
+                     
             if (pictureBox1.Image != null) {
                 acc.Picture = ms.ToArray();
-            }
-            
-            BSE.userAccounts.Add(acc);
-            BSE.SaveChanges();
-           
-            MessageBox.Show("Ügyfél rögzítve");
-
-
-        }
-
-        private void accNoTb_TextChanged(object sender, EventArgs e)
-        {
-
+            }                       
         }
     }
 }
