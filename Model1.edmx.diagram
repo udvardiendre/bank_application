@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c4cfcb4dbab942359c0238c1514dca7e" Name="Diagram1">
-        <EntityTypeShape EntityType="banking_dbModel.Admin_Table" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="banking_dbModel.debit" Width="1.5" PointX="3.75" PointY="0.75" />
-        <EntityTypeShape EntityType="banking_dbModel.deposit" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="banking_dbModel.employeeAccount" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="banking_dbModel.FD" Width="1.5" PointX="4.75" PointY="4.75" />
-        <EntityTypeShape EntityType="banking_dbModel.transfer" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="banking_dbModel.userAccount" Width="1.5" PointX="6.75" PointY="3.75" />
-        <EntityTypeShape EntityType="banking_dbModel.userTable" Width="1.5" PointX="7.75" PointY="0.75" />
+      <Diagram DiagramId="6b9fc3de800d434ea962ba72b9281b95" Name="Diagram1">
+        <EntityTypeShape EntityType="mainModel.Admin_Table" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.debit" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.deposit" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.employeeAccount" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.FD" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.transfer" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.userAccount" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mainModel.userTable" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

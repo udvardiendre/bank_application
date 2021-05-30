@@ -14,7 +14,7 @@ namespace BankApplikáció
     
     public partial class employeeAccount
     {
-        public int user_id { get; set; }
+        public long user_id { get; set; }
         public string Name { get; set; }
         public string Mother_Name { get; set; }
         public string DOB { get; set; }

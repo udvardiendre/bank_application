@@ -59,7 +59,7 @@ namespace BankApplikáció
             {
                 dbe = new banking_dbEntities();
                 decimal accountno = Convert.ToDecimal(accNoTb.Text);
-                userAccount useraccount = dbe.userAccounts.First(s => s.Account_No.Equals(accountno));
+                userAccount useraccount = dbe.userAccount.First(s => s.Account_No.Equals(accountno));
                 useraccount.Account_No = Convert.ToDecimal(accNoTb.Text);
                 useraccount.Name = nameTb.Text;
                 useraccount.Mother_Name = motherNameTb.Text;
@@ -113,7 +113,7 @@ namespace BankApplikáció
                 bi = new BindingList<userAccount>();
                 dbe = new banking_dbEntities();
                 decimal accNo = Convert.ToDecimal(accNoTb.Text);
-                var item = dbe.userAccounts.Where(a => a.Account_No == accNo);
+                var item = dbe.userAccount.Where(a => a.Account_No == accNo);
                 foreach (var item1 in item)
                 {
                     bi.Add(item1);
@@ -133,7 +133,7 @@ namespace BankApplikáció
         {
             bi = new BindingList<userAccount>();
             dbe = new banking_dbEntities();
-            var item = dbe.userAccounts.Where(a => a.Name == nameTb.Text);
+            var item = dbe.userAccount.Where(a => a.Name == nameTb.Text);
             foreach (var item1 in item) {
                 bi.Add(item1);
             }
@@ -144,7 +144,7 @@ namespace BankApplikáció
         {
             dbe = new banking_dbEntities();
             decimal accNo = Convert.ToDecimal(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            var item = dbe.userAccounts.Where(a => a.Account_No == accNo).FirstOrDefault();
+            var item = dbe.userAccount.Where(a => a.Account_No == accNo).FirstOrDefault();
             accNoTb.Text = item.Account_No.ToString();
             nameTb.Text = item.Name;
             motherNameTb.Text = item.Mother_Name;
@@ -195,8 +195,8 @@ namespace BankApplikáció
                 bi.RemoveAt(dataGridView1.CurrentCell.RowIndex);
                 dbe = new banking_dbEntities();
                 decimal a = Convert.ToDecimal(accNoTb.Text);
-                userAccount acc = dbe.userAccounts.First(s => s.Account_No.Equals(a));
-                dbe.userAccounts.Remove(acc);
+                userAccount acc = dbe.userAccount.First(s => s.Account_No.Equals(a));
+                dbe.userAccount.Remove(acc);
                 dbe.SaveChanges();
             } catch (Exception ex) {
                 Console.WriteLine("Kérjük töltse ki az összes mezőt!");

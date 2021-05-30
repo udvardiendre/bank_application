@@ -32,7 +32,7 @@ namespace BankApplikáció
         {
             banking_dbEntities context = new banking_dbEntities();
             decimal accno = Convert.ToDecimal(accNoTb.Text);
-            var accounts = context.userAccounts.Where(x => x.Account_No == accno).SingleOrDefault();
+            var accounts = context.userAccount.Where(x => x.Account_No == accno).SingleOrDefault();
             FD fdform = new FD();
             fdform.Account_No = Convert.ToDecimal(accNoTb.Text);
             fdform.Message = messageTb.Text;
@@ -42,7 +42,7 @@ namespace BankApplikáció
             fdform.Start_Date = DateTime.Now.ToString("yyyy/MM/dd");
             fdform.Maturity_Date = (DateTime.Now.AddDays(Convert.ToInt32(periodTb.Text))).ToString("yyyy/MM/dd");
             fdform.Maturity_Amount = ((Convert.ToDecimal(balanceTb.Text) * Convert.ToInt32(periodTb.Text) * Convert.ToDecimal(interestTb.Text))/(100*12*30)) + (Convert.ToDecimal(balanceTb.Text));
-            context.FDs.Add(fdform);
+            context.FD.Add(fdform);
             decimal amount = Convert.ToDecimal(balanceTb.Text);
             decimal totalamount = Convert.ToDecimal(accounts.Balance);
             decimal fixedamount = totalamount - amount;

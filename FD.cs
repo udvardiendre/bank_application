@@ -14,7 +14,7 @@ namespace BankApplikáció
     
     public partial class FD
     {
-        public int sno { get; set; }
+        public long sno { get; set; }
         public Nullable<decimal> Account_No { get; set; }
         public string Message { get; set; }
         public string Amount { get; set; }

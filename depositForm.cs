@@ -32,7 +32,7 @@ namespace BankApplikáció
         {
             banking_dbEntities context = new banking_dbEntities();
             decimal b = Convert.ToDecimal(accNoTb.Text);
-            var item = (from u in context.userAccounts where u.Account_No == b select u).FirstOrDefault();
+            var item = (from u in context.userAccount where u.Account_No == b select u).FirstOrDefault();
             if (item != null)
             {
                 nameTb.Text = item.Name;
@@ -55,10 +55,10 @@ namespace BankApplikáció
             dp.Old_Balance = Convert.ToDecimal(oldBalTb.Text);
             dp.Message = messageTb.Text;
             dp.Dip_Amount = Convert.ToDecimal(balanceTb.Text);
-            context.deposits.Add(dp);
+            context.deposit.Add(dp);
             context.SaveChanges();
             decimal b = Convert.ToDecimal(accNoTb.Text);
-            var item = (from u in context.userAccounts where u.Account_No == b select u).FirstOrDefault();
+            var item = (from u in context.userAccount where u.Account_No == b select u).FirstOrDefault();
 
             item.Balance = item.Balance + Convert.ToDecimal(balanceTb.Text);
             context.SaveChanges();

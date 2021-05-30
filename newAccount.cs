@@ -53,7 +53,7 @@ namespace BankApplikáció
         private void loadAccount()
         {
             BSE = new banking_dbEntities();
-            var item = BSE.userAccounts.ToArray();
+            var item = BSE.userAccount.ToArray();
             no = item.LastOrDefault().Account_No + 1;
             accNoTb.Text = Convert.ToString(no);
         }
@@ -113,7 +113,7 @@ namespace BankApplikáció
                 acc.Gender = gender;
                 acc.Balance = Convert.ToDecimal(balanceTb.Text);
                 acc.Date = dateLbl.Text;
-                BSE.userAccounts.Add(acc);
+                BSE.userAccount.Add(acc);
                 BSE.SaveChanges();
 
                 MessageBox.Show("Ügyfél rögzítve");

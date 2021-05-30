@@ -14,7 +14,7 @@ namespace BankApplikáció
     
     public partial class deposit
     {
-        public int sno { get; set; }
+        public long sno { get; set; }
         public Nullable<decimal> Account_No { get; set; }
         public string Name { get; set; }
         public Nullable<decimal> Old_Balance { get; set; }

@@ -22,7 +22,7 @@ namespace BankApplikáció
         {
             dataGridView1.AutoGenerateColumns = false;
             banking_dbEntities bs = new banking_dbEntities();
-            var item = bs.userAccounts.ToList();
+            var item = bs.userAccount.ToList();
             dataGridView1.DataSource = item;
         }
 

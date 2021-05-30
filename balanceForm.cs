@@ -29,15 +29,15 @@ namespace BankApplikáció
             decimal b = Convert.ToDecimal(accNoTb.Text);
 
             depositDgv.AutoGenerateColumns = false;
-            var item = (from u in dbe.deposits where u.Account_No == b select u);
+            var item = (from u in dbe.deposit where u.Account_No == b select u);
             depositDgv.DataSource = item.ToList();
 
             withdrawDgv.AutoGenerateColumns = false;
-            var item1 = (from u in dbe.debits where u.Account_No == b select u);
+            var item1 = (from u in dbe.debit where u.Account_No == b select u);
             withdrawDgv.DataSource = item1.ToList();
 
             transferDgv.AutoGenerateColumns = false;
-            var item2 = (from u in dbe.transfers where u.Account_No == b select u);
+            var item2 = (from u in dbe.transfer where u.Account_No == b select u);
             transferDgv.DataSource = item2.ToList();
 
         }

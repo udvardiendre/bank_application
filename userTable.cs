@@ -14,7 +14,7 @@ namespace BankApplikáció
     
     public partial class userTable
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
     }

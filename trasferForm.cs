@@ -27,7 +27,7 @@ namespace BankApplikáció
         {
             banking_dbEntities context = new banking_dbEntities();
             decimal b = Convert.ToDecimal(accNoTb.Text);
-            var item = (from u in context.userAccounts where u.Account_No == b select u).FirstOrDefault();
+            var item = (from u in context.userAccount where u.Account_No == b select u).FirstOrDefault();
             if (item != null)
             {
                 nameTb.Text = item.Name;
@@ -43,12 +43,12 @@ namespace BankApplikáció
         {
             banking_dbEntities context = new banking_dbEntities();
             decimal b = Convert.ToDecimal(accNoTb.Text);
-            var item = (from u in context.userAccounts where u.Account_No == b select u).FirstOrDefault();
+            var item = (from u in context.userAccount where u.Account_No == b select u).FirstOrDefault();
             decimal b1 = Convert.ToDecimal(item.Balance);
             decimal totalbalance = Convert.ToDecimal(balanceTb.Text);
             decimal transferacc = Convert.ToDecimal(destAccNoTb.Text);
             if (b1 > totalbalance) {
-                userAccount item2 = (from u in context.userAccounts where u.Account_No == transferacc select u).FirstOrDefault();
+                userAccount item2 = (from u in context.userAccount where u.Account_No == transferacc select u).FirstOrDefault();
 
                 item2.Balance = item2.Balance + totalbalance;
                 item.Balance = item.Balance - totalbalance;
@@ -59,7 +59,7 @@ namespace BankApplikáció
                 trans.Name = nameTb.Text;
                 trans.Balance = Convert.ToDecimal(balanceTb.Text);
 
-                context.transfers.Add(trans);
+                context.transfer.Add(trans);
                 context.SaveChanges();
                 MessageBox.Show("Sikeres tranzakció!");
 

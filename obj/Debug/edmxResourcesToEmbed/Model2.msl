@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mainModelStoreContainer" CdmEntityContainer="mainEntities1">
+    <EntitySetMapping Name="Admin_Table">
+      <EntityTypeMapping TypeName="mainModel.Admin_Table">
+        <MappingFragment StoreEntitySet="Admin_Table">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="debit">
+      <EntityTypeMapping TypeName="mainModel.debit">
+        <MappingFragment StoreEntitySet="debit">
+          <ScalarProperty Name="sno" ColumnName="sno" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Account_No" ColumnName="Account_No" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Old_Balance" ColumnName="Old_Balance" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Deb_Amount" ColumnName="Deb_Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deposit">
+      <EntityTypeMapping TypeName="mainModel.deposit">
+        <MappingFragment StoreEntitySet="deposit">
+          <ScalarProperty Name="sno" ColumnName="sno" />
+          <ScalarProperty Name="Account_No" ColumnName="Account_No" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Old_Balance" ColumnName="Old_Balance" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Dip_Amount" ColumnName="Dip_Amount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employeeAccount">
+      <EntityTypeMapping TypeName="mainModel.employeeAccount">
+        <MappingFragment StoreEntitySet="employeeAccount">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+          <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FD">
+      <EntityTypeMapping TypeName="mainModel.FD">
+        <MappingFragment StoreEntitySet="FD">
+          <ScalarProperty Name="sno" ColumnName="sno" />
+          <ScalarProperty Name="Account_No" ColumnName="Account_No" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Interest_Rate" ColumnName="Interest_Rate" />
+          <ScalarProperty Name="Maturity_Date" ColumnName="Maturity_Date" />
+          <ScalarProperty Name="Maturity_Amount" ColumnName="Maturity_Amount" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transfer">
+      <EntityTypeMapping TypeName="mainModel.transfer">
+        <MappingFragment StoreEntitySet="transfer">
+          <ScalarProperty Name="sno" ColumnName="sno" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Account_No" ColumnName="Account_No" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="To_Transfer" ColumnName="To_Transfer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userAccount">
+      <EntityTypeMapping TypeName="mainModel.userAccount">
+        <MappingFragment StoreEntitySet="userAccount">
+          <ScalarProperty Name="Account_No" ColumnName="Account_No" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+          <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userTable">
+      <EntityTypeMapping TypeName="mainModel.userTable">
+        <MappingFragment StoreEntitySet="userTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -26,12 +26,12 @@ namespace BankApplikáció
         }
     
         public virtual DbSet<Admin_Table> Admin_Table { get; set; }
-        public virtual DbSet<debit> debits { get; set; }
-        public virtual DbSet<deposit> deposits { get; set; }
-        public virtual DbSet<employeeAccount> employeeAccounts { get; set; }
-        public virtual DbSet<FD> FDs { get; set; }
-        public virtual DbSet<transfer> transfers { get; set; }
-        public virtual DbSet<userAccount> userAccounts { get; set; }
-        public virtual DbSet<userTable> userTables { get; set; }
+        public virtual DbSet<debit> debit { get; set; }
+        public virtual DbSet<deposit> deposit { get; set; }
+        public virtual DbSet<employeeAccount> employeeAccount { get; set; }
+        public virtual DbSet<FD> FD { get; set; }
+        public virtual DbSet<transfer> transfer { get; set; }
+        public virtual DbSet<userAccount> userAccount { get; set; }
+        public virtual DbSet<userTable> userTable { get; set; }
     }
 }
